@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root */
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --grey500: hsl(234, 12%, 34%);
+  --grey400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*Main styles*/
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--grey500);
+}
+h1 {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+h3 {
+  font-weight: 600;
+}
+p {
+  margin-bottom: 60px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.main-text-container {
+  text-align: center;
+  max-width: 500px;
+}
+
+.cards-container {
+  display: grid;
+  gap: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: auto;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 7px;
+  box-shadow: 0px 10px 20px rgba(86, 133, 177, 0.2);
+}
+
+.cards p {
+  margin-bottom: 20px;
+}
+
+.cards:nth-child(1) {
+  border-top: 5px solid var(--cyan);
+}
+
+.cards:nth-child(2) {
+  border-top: 5px solid var(--red);
+}
+
+.cards:nth-child(3) {
+  border-top: 5px solid var(--orange);
+}
+
+.cards:nth-child(4) {
+  border-top: 5px solid var(--blue);
+}
+
+.cards img {
+  justify-self: end;
+}
+
+/*Media query Desktop*/
+
+@media screen and (min-width: 1000px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  main {
+    max-width: 1100px;
+  }
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "A B D"
+      "A C D";
+    gap: 30px;
+  }
+  .cards {
+    padding-bottom: 50px;
+  }
+  .cards:nth-child(1) {
+    grid-area: A;
+    align-self: center;
+  }
+  .cards:nth-child(4) {
+    grid-area: D;
+    align-self: center;
+  }
+}
