@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Code](https://github.com/julianchoripan/FM-four-card-feature-section)
-- Live Site URL: [Live site](https://julianchoripan/github.com/FM-four-card-feature-section)
+- Live Site URL: [Live site](https://julianchoripan.github.com/FM-four-card-feature-section)
 
 ## My process
 
